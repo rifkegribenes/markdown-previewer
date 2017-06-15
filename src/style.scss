@@ -1,0 +1,99 @@
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	box-size: border-box;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    margin-before: 0;
+        -webkit-margin-before: 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+	margin-left: 2em;
+	margin-bottom: 1em;
+}
+
+code {
+		font-family: Inconsolata, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+
+.md {
+	display: flex;
+  flex-wrap: wrap;
+	font-family: "Open Sans", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #36D1DC;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding: 0;
+	height: 100vh;
+
+
+	&__header {
+		text-align: center;
+		font-size: 40px;
+		padding: 40px 0 0 0;
+
+	}
+
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include for-tablet-portrait-up {
+        width: 50%;
+        }
+	}
+
+	&__input {
+	font-family: Inconsolata, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	width: 80%;
+	height: 70%;
+	margin: auto;
+	background: black;
+	color: #00FF00;
+	font-size: 1.25em;
+	padding: 20px;
+	border-radius: .5vw;
+	}
+
+	&__display {
+		width: 80%;
+		height: 70%;
+		margin: auto;
+		background: white;
+		padding: 20px;
+		border-radius: 3px;
+
+	}
+
+
+}
